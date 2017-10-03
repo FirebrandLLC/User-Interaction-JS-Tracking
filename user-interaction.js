@@ -13,9 +13,6 @@ var scrollCount = 0;
 //How many click events
 var clickCount = 0;
 
-//Let's save the timestamp at which the first event was registered
-var timeToInteraction = 0;
-
 //A flag which is used to send off the first interaction immediately (in case the user leaves before the first time-step send)
 var isFirstInteraction = true;
 
@@ -94,9 +91,6 @@ function sendGTMUserEvents(interactionType, firstInteraction) {
 }
 
 jQuery(document).ready(function () {
-
-    //Log the time we're doing this
-    timeToInteraction = Math.floor(Date.now());
 
     var $body = jQuery('body');
 
