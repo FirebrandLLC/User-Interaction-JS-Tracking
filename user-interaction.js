@@ -22,6 +22,10 @@ var isFirstInteraction = true;
 //This object stores the previous values from the last send to GTM so we can compare if the user did anything between time-steps
 var previousRecord = {};
 
+if (typeof dataLayer === 'undefined') {
+    var dataLayer = [];
+}
+
 /**
  * This function is checked every time an event is registered,
  * if the flag is true (as it was initialized)
@@ -40,13 +44,16 @@ function sendFirstInteraction(interactionType) {
 
 /**
  * This function is fired every time we have a chunk of data we want to
- * send back to google analytics, via google tag manager's DataLayer push,
+ * send back to google analytics, via google tag manager's DataLayer push
+ * If you don't use GTM replace the dataLayer.push with a call to ga()
  *
  *
  * @param interactionType
  * @param firstInteraction
  */
 function sendGTMUserEvents(interactionType, firstInteraction) {
+
+    console.log('gtmUserEvents', interactionType, firstInteraction);
 
     /**
      * If it's not the user's first rodeo, set the first interaction flag to false
@@ -93,12 +100,10 @@ function sendGTMUserEvents(interactionType, firstInteraction) {
     previousRecord = dataLayerPushObject;
 }
 
-jQuery(document).ready(function () {
+window.onload = function () {
 
     //Log the time we're doing this
     timeToInteraction = Math.floor(Date.now());
-
-    var $body = jQuery('body');
 
     //Zero out empty record object
     previousRecord = {
@@ -109,7 +114,8 @@ jQuery(document).ready(function () {
         clickCount: 0
     };
 
-    $body.on('mousemove', function () {
+    window.addEventListener('mousemove', function () {
+        console.log('mousemoveeeee');
         mouseMoveCount++;
         sendFirstInteraction('MouseMove');
     });
@@ -118,17 +124,21 @@ jQuery(document).ready(function () {
      * I'm counting touchstarts to give the approximate total number of swipes on the screen,
      * if you cared about the distance of those swipes you could track touchend as well (or instead)
      */
-    $body.on('touchstart', function () {
+
+    window.addEventListener('touchstart', function () {
+        console.log('touchstart');
         touchCount++;
         sendFirstInteraction('Touch');
     });
 
-    jQuery(window).on('scroll', function () {
+    window.addEventListener('scroll', function () {
+        console.log('scroll');
         scrollCount++;
         sendFirstInteraction('Scroll');
     });
 
-    jQuery(document).keydown(function (event) {
+    window.addEventListener('keydown', function (event) {
+        console.log('keydown');
 
         if (event.keyCode === 13) {
             keyCount++;
@@ -139,7 +149,8 @@ jQuery(document).ready(function () {
         }
     });
 
-    $body.click(function () {
+    window.addEventListener('click', function () {
+        console.log('click');
         clickCount++;
         sendFirstInteraction('Click');
     });
@@ -160,4 +171,16 @@ jQuery(document).ready(function () {
         sendGTMUserEvents("67 seconds")
     }, 67000);
 
-});
+    window.setTimeout(function () {
+        sendGTMUserEvents("103 seconds")
+    }, 103000);
+
+    window.setTimeout(function () {
+        sendGTMUserEvents("143 seconds")
+    }, 143000);
+
+    window.setTimeout(function () {
+        sendGTMUserEvents("233 seconds")
+    }, 233000);
+
+};
