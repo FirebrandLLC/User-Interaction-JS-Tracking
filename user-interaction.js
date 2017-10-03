@@ -19,6 +19,11 @@ var isFirstInteraction = true;
 //This object stores the previous values from the last send to GTM so we can compare if the user did anything between time-steps
 var previousRecord = {};
 
+//Define dataLayer as empty array if GTM hasn't been loaded yet
+if (typeof dataLayer === 'undefined') {
+    var dataLayer = [];
+}
+
 /**
  * This function is checked every time an event is registered,
  * if the flag is true (as it was initialized)
