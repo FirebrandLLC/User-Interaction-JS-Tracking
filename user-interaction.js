@@ -53,8 +53,6 @@ function sendFirstInteraction(interactionType) {
  */
 function sendGTMUserEvents(interactionType, firstInteraction) {
 
-    console.log('gtmUserEvents', interactionType, firstInteraction);
-
     /**
      * If it's not the user's first rodeo, set the first interaction flag to false
      */
@@ -115,7 +113,6 @@ window.onload = function () {
     };
 
     window.addEventListener('mousemove', function () {
-        console.log('mousemoveeeee');
         mouseMoveCount++;
         sendFirstInteraction('MouseMove');
     });
@@ -126,20 +123,16 @@ window.onload = function () {
      */
 
     window.addEventListener('touchstart', function () {
-        console.log('touchstart');
         touchCount++;
         sendFirstInteraction('Touch');
     });
 
     window.addEventListener('scroll', function () {
-        console.log('scroll');
         scrollCount++;
         sendFirstInteraction('Scroll');
     });
 
     window.addEventListener('keydown', function (event) {
-        console.log('keydown');
-
         if (event.keyCode === 13) {
             keyCount++;
             sendGTMUserEvents("Return")
@@ -150,7 +143,6 @@ window.onload = function () {
     });
 
     window.addEventListener('click', function () {
-        console.log('click');
         clickCount++;
         sendFirstInteraction('Click');
     });
