@@ -29,6 +29,7 @@ If you haven't already set up Google Tag Manager (GTM), Google has some [helpful
 
 1. Then save your tag
 
+:hamster:
 
 ### Set up a Google Analytics custom dimension
 ![Custom Segment](screenshots/ga-segment.png "Define a segment")
