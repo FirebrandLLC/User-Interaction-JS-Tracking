@@ -14,14 +14,19 @@ This script was designed to generate a custom segment for [Google Analytics](htt
 If you haven't already set up Google Tag Manager (GTM), Google has some [helpful instructions](https://support.google.com/tagmanager/answer/6102821?hl=en).
 1. From the Tags tab, create a new tag
 ![New Tag](screenshots/new-tag.png "New Tag")
-1. Name it "Active User Events"
+
+2. Name it "Active User Events"
 ![Tag Name](screenshots/tag-name.png "Tag Name")
-1. Set the type to Custom HTML
+
+3. Set the type to Custom HTML
 ![Tag Type](screenshots/tag-type.png "Tag Type")
-1. Paste the contents of user-interaction.js into the HTML edit box
+
+4. Paste the contents of user-interaction.js into the HTML edit box
 ![Tag HTML](screenshots/tag-html.png "Tag HTML")
-1. Set the trigger to All Pages
+
+5. Set the trigger to All Pages
 ![Tag Trigger](screenshots/tag-trigger.png "Tag Trigger")
+
 1. Then save your tag
 
 
