@@ -141,12 +141,15 @@ UserInteractionBotDetection = function () {
             dataLayer.push(dataLayerPushObject);
 
         } else {
+
+
             /**
              * If the current values match the old ones,
              * mark as inactive and push this result to GTM
              */
+
             if (userInteractionTracking.scrollCount === userInteractionTracking.previousRecord.scrollCount &&
-                userInteractionTracking.keyCount === userInteractionTracking.reviousRecord.keyCount &&
+                userInteractionTracking.keyCount === userInteractionTracking.previousRecord.keyCount &&
                 userInteractionTracking.clickCount === userInteractionTracking.previousRecord.clickCount &&
                 userInteractionTracking.mouseMoveCount === userInteractionTracking.previousRecord.mouseMoveCount &&
                 userInteractionTracking.touchCount === userInteractionTracking.previousRecord.touchCount) {
@@ -163,7 +166,14 @@ UserInteractionBotDetection = function () {
 
         //Now that we're done with the current record...
         //let's tuck it away for the next comparison
-        userInteractionTracking.previousRecord = dataLayerPushObject;
+        userInteractionTracking.previousRecord = {
+            mouseMoveCount: userInteractionTracking.mouseMoveCount,
+            touchCount: userInteractionTracking.touchCount,
+            keyCount: userInteractionTracking.keyCount,
+            scrollCount: userInteractionTracking.scrollCount,
+            clickCount: userInteractionTracking.clickCount,
+            isFirstInteraction: userInteractionTracking.isFirstInteraction,
+        };
     }
 
     return {}
