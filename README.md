@@ -21,15 +21,15 @@ If you haven't already set up Google Tag Manager (GTM), Google has some [helpful
 3. Set the type to Custom HTML
 ![Tag Type](screenshots/tag-type.png "Tag Type")
 
-4. Paste the contents of user-interaction.js into the HTML edit box
+4. Paste the contents of [user-interaction.js](https://github.com/FirebrandLLC/User-Interaction-JS-Tracking/blob/master/user-interaction.js) into the HTML edit box
 ![Tag HTML](screenshots/tag-html.png "Tag HTML")
 
 5. Set the trigger to All Pages
 ![Tag Trigger](screenshots/tag-trigger.png "Tag Trigger")
 
-1. Then save your tag
+1. Then save and publish your tag
 
-:hamster:
+
 
 ### Set up a Google Analytics custom dimension
 ![Custom Segment](screenshots/ga-segment.png "Define a segment")
