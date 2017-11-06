@@ -10,24 +10,32 @@ Installation
 ------------
 This script was designed to generate a custom segment for [Google Analytics](https://analytics.google.com/). And is implemented using [Google Tag Manager](https://www.google.com/analytics/tag-manager/)
 
-### Add the script tag to Google Tag manager
+### Set up Google Tag Manager
 If you haven't already set up Google Tag Manager (GTM), Google has some [helpful instructions](https://support.google.com/tagmanager/answer/6102821?hl=en).
+
+### Add the script tag to Google Tag Manager
+
 1. From the Tags tab, create a new tag
-![New Tag](screenshots/new-tag.png "New Tag")
+
+ ![New Tag](screenshots/new-tag.png "New Tag")
 
 2. Name it "Active User Events"
-![Tag Name](screenshots/tag-name.png "Tag Name")
+
+ ![Tag Name](screenshots/tag-name.png "Tag Name")
 
 3. Set the type to Custom HTML
-![Tag Type](screenshots/tag-type.png "Tag Type")
 
-4. Paste the contents of [user-interaction.js](https://github.com/FirebrandLLC/User-Interaction-JS-Tracking/blob/master/user-interaction.js) into the HTML edit box
-![Tag HTML](screenshots/tag-html.png "Tag HTML")
+ ![Tag Type](screenshots/tag-type.png "Tag Type")
 
-5. Set the trigger to All Pages
-![Tag Trigger](screenshots/tag-trigger.png "Tag Trigger")
+4. Paste the contents of  [user-interaction.js](https://github.com/FirebrandLLC/User-Interaction-JS-Tracking/blob/master/user-interaction.js) into the HTML edit box
 
-1. Then save and publish your tag
+ ![Tag HTML](screenshots/tag-html.png "Tag HTML")
+
+5. Set the trigger to "All Pages."
+
+ ![Tag Trigger](screenshots/tag-trigger.png "Tag Trigger")
+
+6. Then save and publish your tag
 
 
 
