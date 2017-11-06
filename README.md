@@ -37,12 +37,23 @@ If you haven't already set up Google Tag Manager (GTM), Google has some [helpful
 
 6. Then save and publish your tag
 
-
-
-### Set up a Google Analytics custom dimension
-![Custom Segment](screenshots/ga-segment.png "Define a segment")
-
-
+### Use the events in your reports
+Your sessions will now include new events:
+<dl>
+<dt>Category:</dt>
+<dd>UserInteractionEvent - v3 (Needs new name)</dd>
+<dt>Action:</dt>
+<dd>
+ - MouseMove
+ - Touch
+ - Scroll
+ - KeyDown
+ - Click
+ </dd>
+<dt>Label:</dt>
+<dd>
+</dd>
+</dl>
 
 
 
