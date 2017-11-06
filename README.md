@@ -49,19 +49,26 @@ Your sessions will now include new events:
  - Scroll
  - KeyDown
  - Click
+ - 5 seconds
+ - 19 seconds
+ - 39 seconds
+ - 67 seconds
+ - etc.
  </dd>
 <dt>Label:</dt>
 <dd>
+ - ActiveInteractionEvent
+ - InactiveInteractionEvent
 </dd>
 </dl>
 
+Any session with an ActiveInteractionEvent is probably a human.
 
 
-
-Screenshots
------------
 Features
 ----------
+ - Easily implemented on most sites using Google Tag Manager or inserting the code in your site's theme
+ - Reports can use simple tests for events without setting up custom dimensions
 
 License
 -------
