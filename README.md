@@ -47,21 +47,20 @@ Your sessions will now include new events:
 
   + MouseMove
   + Touch
-
-* Scroll
-* KeyDown
-* Click
-
-  *  5 seconds
-  * 19 seconds
-  * 39 seconds
-  * 67 seconds
-  * etc.
+  + Scroll
+  + KeyDown
+  + Click
+  + 5 seconds
+  + 19 seconds
+  + 39 seconds
+  + 67 seconds
+  + etc.
  </dd>
 <dt>Label:</dt>
 <dd>
- - ActiveInteractionEvent
- - InactiveInteractionEvent
+
+  + ActiveInteractionEvent
+  + InactiveInteractionEvent
 </dd>
 </dl>
 
