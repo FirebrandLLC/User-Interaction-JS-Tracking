@@ -44,16 +44,19 @@ Your sessions will now include new events:
 <dd>UserInteractionEvent - v3 (Needs new name)</dd>
 <dt>Action:</dt>
 <dd>
- - MouseMove
- - Touch
- - Scroll
- - KeyDown
- - Click
- - 5 seconds
- - 19 seconds
- - 39 seconds
- - 67 seconds
- - etc.
+
+  + MouseMove
+  + Touch
+
+* Scroll
+* KeyDown
+* Click
+
+  *  5 seconds
+  * 19 seconds
+  * 39 seconds
+  * 67 seconds
+  * etc.
  </dd>
 <dt>Label:</dt>
 <dd>
