@@ -3,7 +3,7 @@
  * @returns { {} }
  * @constructor
  */
-UserInteractionBotDetection = function () {
+FirebrandUserInteractionEvents = function () {
     /**
      * The object in which user events are stored
      * @type { { mouseMoveCount: number, touchCount: number, keyCount: number, scrollCount: number, clickCount: number, isFirstInteraction: boolean, previousRecord: {} } }
@@ -183,6 +183,6 @@ jQuery(document).ready(function () {
     if (typeof jQuery !== 'function') {
         console.warn('jQuery is not defined!');
     } else {
-        UserInteractionBotDetection();
+        FirebrandUserInteractionEvents();
     }
 });
