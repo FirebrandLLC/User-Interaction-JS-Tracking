@@ -41,7 +41,7 @@ If you haven't already set up Google Tag Manager (GTM), Google has some [helpful
 Your sessions will now include new events:
 <dl>
 <dt>Category:</dt>
-<dd>UserInteractionEvent - v3 (Needs new name)</dd>
+<dd>Firebrand User Events</dd>
 <dt>Action:</dt>
 <dd>
 
