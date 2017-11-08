@@ -1,4 +1,11 @@
 /**
+ * @file Sends Google Analytics events when users interact with page or if they are inactive for specified periods.
+ * @version 1.0
+ * @author Firebrand LLC. https://firebrand.net
+ * @license Apache-2.0
+ */
+
+/**
  *
  * @returns { {} }
  * @constructor
