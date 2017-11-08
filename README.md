@@ -6,6 +6,12 @@ Google Analytics reports are polluted with a lot of "Direct" traffic that doesn'
 
 This script implements a method to discriminate between users interacting with an app or web page and bots just accessing a page.
 
+Requirements
+------------
+ - jQuery - Script uses jQuery to capture interaction events
+ - Google Analytics - The data is sent to Google Analytics
+ - Google Tag Manager - This implementation uses Google Tag Manager
+
 Installation
 ------------
 This script was designed to generate a custom segment for [Google Analytics](https://analytics.google.com/). And is implemented using [Google Tag Manager](https://www.google.com/analytics/tag-manager/)
@@ -27,7 +33,7 @@ If you haven't already set up Google Tag Manager (GTM), Google has some [helpful
 
  ![Tag Type](screenshots/tag-type.png "Tag Type")
 
-4. Paste the contents of [user-interaction.js](https://github.com/FirebrandLLC/User-Interaction-JS-Tracking/blob/master/user-interaction.js) into the HTML edit box. Add script tags around the code.
+4. Paste the contents of [user-interaction.js](https://github.com/FirebrandLLC/User-Interaction-JS-Tracking/blob/master/user-interaction.js) into the HTML edit box. Add script tags around the JavaScript.
 
  ![Tag HTML](screenshots/tag-html.png "Tag HTML")
 
