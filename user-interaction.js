@@ -137,9 +137,9 @@ FirebrandUserInteractionEvents = function () {
 
         var dataLayerPushObject = {
             "event": "GAEvent",
-            "eventCategory": "UserInteractionEvent - v3",
+            "eventCategory": "Firebrand User Events",
             "eventAction": interactionType,
-            "eventLabel": 'ActiveInteractionEvent',
+            "eventLabel": 'Active Interaction',
             "nonInteraction": true
         };
 
@@ -161,7 +161,7 @@ FirebrandUserInteractionEvents = function () {
                 userInteractionTracking.mouseMoveCount === userInteractionTracking.previousRecord.mouseMoveCount &&
                 userInteractionTracking.touchCount === userInteractionTracking.previousRecord.touchCount) {
 
-                dataLayerPushObject.eventLabel = 'InactiveInteractionEvent';
+                dataLayerPushObject.eventLabel = 'Inactive Interaction';
 
                 //Then Push non-interaction
                 dataLayer.push(dataLayerPushObject);

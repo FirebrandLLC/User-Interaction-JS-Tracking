@@ -59,8 +59,8 @@ Your sessions will now include new events:
 <dt>Label:</dt>
 <dd>
 
-  + ActiveInteractionEvent
-  + InactiveInteractionEvent
+  + Active Interaction
+  + Inactive Interaction
 </dd>
 </dl>
 
