@@ -72,8 +72,8 @@ FirebrandUserInteractionEvents = function () {
     });
 
     /**
-     * I'm counting touchstarts to give the approximate total number of swipes on the screen,
-     * if you cared about the distance of those swipes you could track touchend as well (or instead)
+     * Count touchstarts to get approximate total number of swipes on the screen.
+     * To capture distance of those swipes, track touchend as well (or instead).
      */
     $body.on('touchstart', function () {
         userInteractionTracking.touchCount++;
@@ -151,7 +151,7 @@ FirebrandUserInteractionEvents = function () {
 
 
             /**
-             * If the current values match the old ones,
+             * If none of our metrics have changed,
              * mark as inactive and push this result to GTM
              */
 
