@@ -51,7 +51,7 @@ Or you can import our [pre-packaged version](https://github.com/FirebrandLLC/GTM
 
  ![Tag Trigger](screenshots/tag-trigger.png "Tag Trigger")
 
-6. Then save and publish your tag. Of course, you should preview your changes and make sure there are no errors first.
+6. Then save and publish your tag. Of course, you should [preview your changes](https://support.google.com/tagmanager/answer/6107056?hl=en) and make sure there are no errors first.
 
 ### Use the events in your reports
 Your Google Analytics sessions will now include new events:
@@ -60,6 +60,7 @@ Your Google Analytics sessions will now include new events:
 <dd>Firebrand User Events</dd>
 <dt>Action:</dt>
 <dd>
+
   + MouseMove
   + Touch
   + Scroll
