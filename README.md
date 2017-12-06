@@ -4,12 +4,19 @@ Motivation
 ----------
 Google Analytics reports are polluted with a lot of "Direct" traffic that doesn't appear to correlate with other visitor information.
 
-This script implements a method to discriminate between users interacting with an app or web page and bots just accessing a page.
+This script implements a method, using Google Analytics Events, to discriminate between users interacting with an app or web page and bots just accessing a page.
 
+Learn more about our [research](https://firebrand.net).
+
+Features
+----------
+ - Easily implemented on most sites using Google Tag Manager or inserting the code in your site's theme
+ - Reports can use simple tests for events without setting up custom dimensions
+ 
 Requirements
 ------------
  - jQuery - Script uses jQuery to capture interaction events
- - Google Analytics - The data is sent to Google Analytics
+ - Google Analytics - The data is sent to Google Universal Analytics
  - Google Tag Manager - This implementation uses Google Tag Manager
 
 Installation
@@ -18,6 +25,9 @@ This script was designed to generate a custom segment for [Google Analytics](htt
 
 ### Set up Google Tag Manager
 If you haven't already set up Google Tag Manager (GTM), Google has some [helpful instructions](https://support.google.com/tagmanager/answer/6102821?hl=en).
+
+Create a generic GA Event tag to send the data to Google Analytics. Simo Ahava [explains how](https://www.simoahava.com/analytics/create-a-generic-event-tag/). 
+Or you can import our [pre-packaged version](https://github.com/FirebrandLLC/GTM-GAEvent).  Just Import Container and select "merge." Then update the Global Settings variable with your Analytics ID and any other settings.
 
 ### Add the script tag to Google Tag Manager
 
@@ -37,20 +47,19 @@ If you haven't already set up Google Tag Manager (GTM), Google has some [helpful
 
  ![Tag HTML](screenshots/tag-html.png "Tag HTML")
 
-5. Set the trigger to "All Pages."
+5. Set the trigger to "All Pages"
 
  ![Tag Trigger](screenshots/tag-trigger.png "Tag Trigger")
 
-6. Then save and publish your tag
+6. Then save and publish your tag. Of course, you should preview your changes and make sure there are no errors first.
 
 ### Use the events in your reports
-Your sessions will now include new events:
+Your Google Analytics sessions will now include new events:
 <dl>
 <dt>Category:</dt>
 <dd>Firebrand User Events</dd>
 <dt>Action:</dt>
 <dd>
-
   + MouseMove
   + Touch
   + Scroll
@@ -70,13 +79,10 @@ Your sessions will now include new events:
 </dd>
 </dl>
 
-Any session with an ActiveInteractionEvent is probably a human.
+Any session with an Active Interaction event is probably a human.
 
 
-Features
-----------
- - Easily implemented on most sites using Google Tag Manager or inserting the code in your site's theme
- - Reports can use simple tests for events without setting up custom dimensions
+
 
 License
 -------
