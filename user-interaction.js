@@ -55,8 +55,6 @@ FirebrandUserInteractionEvents = function () {
         }
     }
 
-    var $body = jQuery('body');
-
     //Zero out empty record object
     userInteractionTracking.previousRecord = {
         touchCount: 0,
@@ -66,7 +64,7 @@ FirebrandUserInteractionEvents = function () {
         clickCount: 0
     };
 
-    $body.on('mousemove', function () {
+    window.addEventListener('mousemove', function () {
         userInteractionTracking.mouseMoveCount++;
         sendFirstInteraction('MouseMove');
     });
@@ -75,17 +73,17 @@ FirebrandUserInteractionEvents = function () {
      * Count touchstarts to get approximate total number of swipes on the screen.
      * To capture distance of those swipes, track touchend as well (or instead).
      */
-    $body.on('touchstart', function () {
+    window.addEventListener('touchstart', function () {
         userInteractionTracking.touchCount++;
         sendFirstInteraction('Touch');
     });
 
-    jQuery(window).on('scroll', function () {
+    window.addEventListener('scroll', function () {
         userInteractionTracking.scrollCount++;
         sendFirstInteraction('Scroll');
     });
 
-    jQuery(document).keydown(function (event) {
+    window.addEventListener('keydown', function (event) {
 
         if (event.keyCode === 13) {
             userInteractionTracking.keyCount++;
@@ -96,7 +94,7 @@ FirebrandUserInteractionEvents = function () {
         }
     });
 
-    $body.click(function () {
+    window.addEventListener('click', function () {
         userInteractionTracking.clickCount++;
         sendFirstInteraction('Click');
     });
@@ -185,10 +183,10 @@ FirebrandUserInteractionEvents = function () {
     return {}
 };
 
-jQuery(document).ready(function () {
-    if (typeof jQuery !== 'function') {
-        console.warn('jQuery is not defined!');
-    } else {
+window.onload = function () {
+    if (typeof FirebrandUserInteractionEvents === 'function') {
         FirebrandUserInteractionEvents();
+    } else {
+        console.warn('FirebrandUserInteractionEvents is not defined!');
     }
-});
+};
