@@ -57,7 +57,7 @@ FirebrandUserInteractionEvents = function () {
 
     var $body = jQuery('body');
 
-//Zero out empty record object
+    //Zero out empty record object
     userInteractionTracking.previousRecord = {
         touchCount: 0,
         mouseMoveCount: 0,
@@ -148,7 +148,6 @@ FirebrandUserInteractionEvents = function () {
             dataLayer.push(dataLayerPushObject);
 
         } else {
-
 
             /**
              * If none of our metrics have changed,
